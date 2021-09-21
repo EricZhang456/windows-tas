@@ -23,6 +23,6 @@ reg add HKLM\SOFT\Microsoft\Windows\CurrentVersion\Policies\System /v VerboseSta
 reg import reg.reg
 echo Copying second part of the script to the filesystem
 copy 2.bat C:\
-pause
+rem pause
 echo Rebooting
 wpeutil reboot
