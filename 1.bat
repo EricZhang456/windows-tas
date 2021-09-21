@@ -20,9 +20,9 @@ echo Performing registry actions
 reg load HKLM\SOFT C:\Windows\system32\config\SOFTWARE
 reg load HKLM\SYS C:\Windows\system32\config\system
 reg add HKLM\SOFT\Microsoft\Windows\CurrentVersion\Policies\System /v VerboseStatus /t REG_DWORD /d 1
-reg import reg.reg
+reg import E:\reg.reg
 echo Copying second part of the script to the filesystem
-copy 2.bat C:\
+copy E:\2.bat C:\
 rem pause
 echo Rebooting
 wpeutil reboot
