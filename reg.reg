@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFT\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableCursorSuppression"=dword:00000000
+[HKEY_LOCAL_MACHINE\SYS\Setup]
+"CmdLine"="cmd.exe C:\2.bat"
