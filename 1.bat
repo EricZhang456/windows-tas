@@ -15,7 +15,8 @@ D:
 cd sources
 dism /apply-image /imagefile:install.wim /index:1 /applydir:C:\
 echo Installing bootloader
-bootrec /fixmbr
+rem bootrec /fixmbr
+bcdboot C:\Windows
 echo Performing registry actions
 reg load HKLM\SOFT C:\Windows\system32\config\SOFTWARE
 reg load HKLM\SYS C:\Windows\system32\config\system
