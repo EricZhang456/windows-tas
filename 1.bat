@@ -15,8 +15,12 @@ D:
 cd sources
 dism /apply-image /imagefile:install.wim /index:1 /applydir:C:\
 echo Installing bootloader
+rem I literally have no idea what I am doing
 rem bootrec /fixmbr
-bcdboot C:\Windows
+rem bcdboot C:\Windows /s W: /f BIOS
+bcdboot C:\Windows /s C: /f BIOS /v
+pause
+rem bootrec /rebuildbcd
 echo Performing registry actions
 reg load HKLM\SOFT C:\Windows\system32\config\SOFTWARE
 reg load HKLM\SYS C:\Windows\system32\config\system
