@@ -3,7 +3,10 @@ rem inspired by enderman on youtube
 echo Partioning the disk and mounting the file system
 (echo select disk 0
 echo clean
-echo convert mbr
+echo convert gpt
+echo create part efi size=500
+echo format fs=fat32 quick
+echo assign letter w
 echo create part primary
 echo format fs=ntfs quick
 echo assign letter c
@@ -18,11 +21,13 @@ echo Installing bootloader
 rem I literally have no idea what I am doing
 rem Bootrec doesn't work, bcdboot can't seem to install properly
 rem IDK anything about all these
+rem I am done with BIOS
 rem bootrec /fixmbr
-bcdboot C:\Windows /s W: /f BIOS
+rem bcdboot C:\Windows /s W: /f BIOS
 rem bcdboot C:\Windows /s C: /f BIOS /v
 rem pause
 rem bootrec /rebuildbcd
+bcdboot C:\Windows /s W:
 echo Performing registry actions
 reg load HKLM\SOFT C:\Windows\system32\config\SOFTWARE
 reg load HKLM\SYS C:\Windows\system32\config\system
