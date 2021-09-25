@@ -7,3 +7,4 @@ An automated Windows 10 installation script for UEFI systems. Works on Build 180
 
 * Can't perform post-installation script
 * Can't skip OOBE *(registry?)*
+* Doesn't work on newer builds *(at least 2004) (won't fix)*
