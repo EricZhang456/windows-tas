@@ -22,11 +22,6 @@ rem I literally have no idea what I am doing
 rem Bootrec doesn't work, bcdboot can't seem to install properly
 rem IDK anything about all these
 rem I am done with BIOS
-rem bootrec /fixmbr
-rem bcdboot C:\Windows /s W: /f BIOS
-rem bcdboot C:\Windows /s C: /f BIOS /v
-rem pause
-rem bootrec /rebuildbcd
 bcdboot C:\Windows /s W:
 echo Performing registry actions
 reg load HKLM\SOFT C:\Windows\system32\config\SOFTWARE
@@ -37,6 +32,5 @@ reg import E:\reg.reg
 echo Copying second part of the script to the file system
 copy E:\2.bat C:\
 copy E:\reg2.reg C:\
-rem pause
 echo Rebooting
 wpeutil reboot
